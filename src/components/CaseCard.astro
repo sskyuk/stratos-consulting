@@ -1,0 +1,60 @@
+---
+// 1. Props（外から受け取るデータ）の定義
+// TypeScriptを使うと、どんなデータが必要か明確になります（コンサルらしい堅牢さ！）
+interface Props {
+  tag: string;
+  title: string;
+  description: string;
+}
+
+// 2. 渡されたデータを変数に格納
+const { tag, title, description } = Astro.props;
+---
+
+<div class="case-card">
+  <div class="case-tag">{tag}</div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+</div>
+
+<style>
+  /* 前に index.astro に書いていたカードのスタイルをここに移動します */
+  .case-card {
+    background: #f4f7f9; /* var(--gray) の値 */
+    padding: 2rem;
+    border-left: 4px solid #001f3f; /* var(--navy) の値 */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    height: 100%; /* 高さを揃える */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-left-color: #00d4ff; /* var(--accent) の値 */
+  }
+
+  .case-tag {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #001f3f;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>

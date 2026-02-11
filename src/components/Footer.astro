@@ -1,0 +1,133 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="footer-logo">ΣTRATOS <span class="sub">Consulting</span></div>
+        <p class="address">
+          〒106-0032<br />
+          東京都港区六本木 Σ-Tower 22F<br />
+          <span class="tel">TEL: 03-ニャンニャン-ニャンニャン</span>
+        </p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+            <li><a href="#company">Company</a></li>
+          </ul>
+        </div>
+        <div class="link-group">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} ΣTRATOS Consulting. All rights reserved.</p>
+      <p class="cat-message">Powered by High-Logic & Premium Catnip.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+    font-size: 0.9rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+  .footer-logo .sub {
+    font-size: 0.8rem;
+    font-weight: normal;
+    opacity: 0.7;
+  }
+  .address {
+    line-height: 1.8;
+    opacity: 0.8;
+    color: #ffffff;
+  }
+  .footer-links {
+    display: flex;
+    gap: 4rem;
+  }
+  h4 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    margin-bottom: 0.8rem;
+  }
+  ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  ul li a:hover {
+    opacity: 1;
+    color: var(--accent);
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .cat-message {
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    .footer-links {
+      gap: 2rem;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>

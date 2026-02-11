@@ -1,0 +1,46 @@
+---
+import CaseCard from './CaseCard.astro';
+---
+
+<section id="cases" class="cases">
+  <div class="container">
+    <h2 class="section-title">Case Studies</h2>
+    <p class="section-sub">私たちが手掛けた、論理とユーモアの融合事例</p>
+    
+    <div class="case-grid">
+      <CaseCard 
+        tag="Educational Security" 
+        title="成宮高等学校：通信規律維持システム" 
+        description="量子化学的アプローチによる校内電波傍受。生徒のスマホ操作を0.1秒で検知。"
+      />
+      <CaseCard 
+        tag="Quantum Physics" 
+        title="埼玉大学：極限演算アーキテクチャ" 
+        description="核融合シミュレーションへの量子コンピュータ導入。数世紀の計算を数秒へ。"
+      />
+      <CaseCard 
+        tag="HR Transformation" 
+        title="大手製造業：HDX（ユーモア改革）" 
+        description="「くすっと笑える」業務プロセスの構築。会議へのAIボケ投入による心理的安全性の向上。"
+      />
+      <CaseCard 
+        tag="FinTech" 
+        title="メガバンク：生命音決済インフラ" 
+        description="決済音を弊社代表（シグマ）の鳴き声に置換。支払うたびに幸福度が高まる金融体験。"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ここには「セクション全体」のレイアウト用CSSだけを書く */
+  .cases { padding: 5rem 2rem; background-color: #ffffff; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 0.5rem; }
+  /* ...（先ほど index.astro に書いていたセクション用の CSS）... */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+</style>
